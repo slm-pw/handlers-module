@@ -24,7 +24,7 @@ function checker(dir, client) {
     } else {
         let event = require(dir)
         if(event.event) {
-            client.on(event.event, event.run.bind(client))
+            client.on(event.event, event.run.bind(null, client))
         }
     }
 }
