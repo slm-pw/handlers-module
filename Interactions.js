@@ -19,7 +19,7 @@ module.exports = async function interactionHandler(client) {
         if (fs.lstatSync(`${__dirname}/../${file}`).isDirectory()) {
             let folderFiles = fs.readdirSync(`${__dirname}/../${file}/interactions`)
             for (let folderFile of folderFiles) {
-                checker(`${dir}/${folderFile}`, client)
+                checker(`${__dirname}/../${file}/interactions/${folderFile}`, client)
             }
         }
     }
