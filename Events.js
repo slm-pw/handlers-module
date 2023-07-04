@@ -8,7 +8,7 @@ module.exports = async function eventsHandler(client) {
         if (fs.lstatSync(`${__dirname}/../${file}`).isDirectory()) {
             let folderFiles = fs.readdirSync(`${__dirname}/../${file}/events`)
             for (let folderFile of folderFiles) {
-                checker(`${dir}/${folderFile}`, client)
+                checker(`${__dirname}/../${file}/events/${folderFile}`, client)
             }
         }
     }
