@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = async function eventsHandler(client) {
     let entities = []
     let files = fs.readdirSync(`${__dirname}/..`)
